@@ -20,10 +20,8 @@ namespace Proj3_Tomasello
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
 
         public void ClearAllMortgages()
@@ -35,10 +33,8 @@ namespace Proj3_Tomasello
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
 
         public List<string> ListAllMortgages()
@@ -49,10 +45,8 @@ namespace Proj3_Tomasello
             if (File.Exists(fileLocation))
             {
                 string[] allTempStringArray = File.ReadAllLines(fileLocation);
-
                 allData = new List<string>(allTempStringArray);
             }
-
             return allData;
         }
     }
