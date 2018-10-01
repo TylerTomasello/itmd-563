@@ -10,6 +10,7 @@
     <title>Calculate Mortgage</title>
 </head>
 <body>
+    <!-- Link to Git repository: https://github.com/TylerTomasello/itmd-563/tree/master/Proj3_Tomasello -->
     <form id="form1" runat="server">
         <div>
             <uc1:SiteNavigation runat="server" id="SiteNavigation" />
