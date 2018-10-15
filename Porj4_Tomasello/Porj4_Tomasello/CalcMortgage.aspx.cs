@@ -80,12 +80,11 @@ namespace Porj4_Tomasello
             }
         }
 
-        private double CalcMonthlyPayment(double principle, double years, double Rate)
+        public static double CalcMonthlyPayment(double principle, double years, double Rate)
         {
-            double monthly = 0;
             double top = principle * Rate / 1200.00;
-            double bottom = 1 - Math.Pow(1.0 + Rate / 1200.0, -12.0 * years);
-            monthly = top / bottom;
+            double bottom = 1 - Math.Pow(1.00 + Rate / 1200.00, -12.00 * years);
+            double monthly = top / bottom;
             return monthly;
         }
     }

@@ -25,10 +25,46 @@
         <div>
             Please select the interest rate
             <asp:DropDownList ID="DropDownList1" AutoPostBack="true" runat="server">
-                <asp:ListItem>1</asp:ListItem>
-                <asp:ListItem>2</asp:ListItem>
-                <asp:ListItem>3</asp:ListItem>
-                <asp:ListItem>4</asp:ListItem>
+                <asp:ListItem>.25</asp:ListItem>
+                <asp:ListItem>.50</asp:ListItem>
+                <asp:ListItem>.75</asp:ListItem>
+                <asp:ListItem>1.00</asp:ListItem>
+                <asp:ListItem>1.25</asp:ListItem>
+                <asp:ListItem>1.50</asp:ListItem>
+                <asp:ListItem>1.75</asp:ListItem>
+                <asp:ListItem>2.00</asp:ListItem>
+                <asp:ListItem>2.25</asp:ListItem>
+                <asp:ListItem>2.50</asp:ListItem>
+                <asp:ListItem>2.75</asp:ListItem>
+                <asp:ListItem>3.00</asp:ListItem>
+                <asp:ListItem>3.25</asp:ListItem>
+                <asp:ListItem>3.50</asp:ListItem>
+                <asp:ListItem>3.75</asp:ListItem>
+                <asp:ListItem>4.00</asp:ListItem>
+                <asp:ListItem>4.25</asp:ListItem>
+                <asp:ListItem>4.50</asp:ListItem>
+                <asp:ListItem>4.75</asp:ListItem>
+                <asp:ListItem>5.00</asp:ListItem>
+                <asp:ListItem>5.25</asp:ListItem>
+                <asp:ListItem>5.50</asp:ListItem>
+                <asp:ListItem>5.75</asp:ListItem>
+                <asp:ListItem>6.00</asp:ListItem>
+                <asp:ListItem>6.25</asp:ListItem>
+                <asp:ListItem>6.50</asp:ListItem>
+                <asp:ListItem>6.75</asp:ListItem>
+                <asp:ListItem>7.00</asp:ListItem>
+                <asp:ListItem>7.25</asp:ListItem>
+                <asp:ListItem>7.50</asp:ListItem>
+                <asp:ListItem>7.75</asp:ListItem>
+                <asp:ListItem>8.00</asp:ListItem>
+                <asp:ListItem>8.25</asp:ListItem>
+                <asp:ListItem>8.50</asp:ListItem>
+                <asp:ListItem>8.75</asp:ListItem>
+                <asp:ListItem>9.00</asp:ListItem>
+                <asp:ListItem>9.25</asp:ListItem>
+                <asp:ListItem>9.50</asp:ListItem>
+                <asp:ListItem>9.75</asp:ListItem>
+                <asp:ListItem>10.00</asp:ListItem>
             </asp:DropDownList>
         </div>
         <br />
