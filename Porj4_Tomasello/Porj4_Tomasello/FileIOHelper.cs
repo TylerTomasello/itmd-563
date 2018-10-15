@@ -8,6 +8,7 @@ namespace Porj4_Tomasello
 {
     public class FileIOHelper : IIOHelper
     {
+        //Add mortgages to the file
         public void AddMortgages(string formattedTempString)
         {
             try
@@ -24,6 +25,7 @@ namespace Porj4_Tomasello
             }
         }
 
+        //Clear the mortgages from the file
         public void ClearAllMortgages()
         {
             try
@@ -37,6 +39,7 @@ namespace Porj4_Tomasello
             }
         }
 
+        //Display the mortgages list from the file
         public List<string> ListAllMortgages()
         {
             List<string> Data = new List<string>();

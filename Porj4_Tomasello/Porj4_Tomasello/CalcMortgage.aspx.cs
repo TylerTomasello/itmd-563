@@ -17,6 +17,7 @@ namespace Porj4_Tomasello
             }
         }
 
+        //If Other year duration is selected take the text from it
         protected void Duration_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Duration.SelectedValue.ToLower() == "Other".ToLower())
@@ -32,6 +33,7 @@ namespace Porj4_Tomasello
             }
         }
 
+        //When the Compute button is clicked
         protected void Compute_Click(object sender, EventArgs e)
         {
             string princ = PrincipleAmount.Text;
@@ -40,12 +42,14 @@ namespace Porj4_Tomasello
             double years = 0;
             bool check = false;
 
+            //Make sure the value is legitamte to use
             if (double.TryParse(princ, out double principle) == false)
             {
                 Result.Text = $"Error: Please enter a Priciple Amount";
                 check = true;
             }
 
+            //Check which yearly duration is chosen
             if (Duration.SelectedIndex == 0)
             {
                 years = 15;
@@ -56,6 +60,7 @@ namespace Porj4_Tomasello
             }
             else if (Duration.SelectedIndex == 2)
             {
+                //Check to make sure inputted year is legal
                 if (double.TryParse(year, out years) == false)
                 {
                     Result.Text = $"Error: Please enter a Loan Duration";
@@ -63,12 +68,14 @@ namespace Porj4_Tomasello
                 }
             }
 
+            //Make sure user selects a rate
             if (double.TryParse(rate, out double Rate) == false)
             {
                 Result.Text = $"Error: Please select an Interest Rate";
                 check = true;
             }
 
+            //Call the calculate function and display the monthly payments
             if (check == false)
             {
                 double month = CalcMonthlyPayment(principle, years, Rate);
@@ -80,6 +87,7 @@ namespace Porj4_Tomasello
             }
         }
 
+        //Calculate the monthly payment of the principle, years, and rate
         public static double CalcMonthlyPayment(double principle, double years, double Rate)
         {
             double top = principle * Rate / 1200.00;

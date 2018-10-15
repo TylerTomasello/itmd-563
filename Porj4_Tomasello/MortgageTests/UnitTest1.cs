@@ -7,6 +7,7 @@ namespace MortgageTests
     [TestClass]
     public class UnitTest1
     {
+        //Tested if each year and rate worked with 0
         [TestMethod]
         public void TestZeroYear15()
         {
@@ -28,6 +29,7 @@ namespace MortgageTests
             Assert.AreEqual(0.00, mort);
         }
 
+        //Sample test of using rate 1%
         [TestMethod]
         public void TestRate1()
         {
@@ -37,6 +39,7 @@ namespace MortgageTests
             Assert.AreNotEqual(5.98, mort);
         }
 
+        //Sample test using rate 2%
         [TestMethod]
         public void TestRate2()
         {

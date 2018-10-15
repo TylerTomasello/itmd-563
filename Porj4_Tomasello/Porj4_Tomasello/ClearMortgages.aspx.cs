@@ -16,6 +16,7 @@ namespace Porj4_Tomasello
 
         protected void Clear_Click(object sender, EventArgs e)
         {
+            //Call the IIOHelper to clear the mortgages
             IIOHelper iOHelper = new FileIOHelper();
             iOHelper.ClearAllMortgages();
         }

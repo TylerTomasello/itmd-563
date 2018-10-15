@@ -14,6 +14,7 @@ namespace Porj4_Tomasello
 
         }
 
+        //Have the timer display the day, month, date, year, hour, minutes, and seconds
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             TimerLabel.Text = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
