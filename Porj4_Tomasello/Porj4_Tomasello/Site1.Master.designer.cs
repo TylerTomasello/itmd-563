@@ -22,6 +22,15 @@ namespace Porj4_Tomasello {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// MasterP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MasterP;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -83,5 +92,14 @@ namespace Porj4_Tomasello {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label TimerLabel;
+        
+        /// <summary>
+        /// Copyright control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Copyright;
     }
 }

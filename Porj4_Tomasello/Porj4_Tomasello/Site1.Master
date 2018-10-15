@@ -12,6 +12,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <asp:Label ID="MasterP" runat="server" Text="This is the awesome master page" BackColor="#66FFFF" BorderColor="#990033" BorderStyle="Dashed" Width="1000" Font-Size="XX-Large" Font-Bold="True"></asp:Label>
     <hr />
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
@@ -32,6 +33,10 @@
                 <asp:Label ID="TimerLabel" runat="server" Text=""></asp:Label>
             </ContentTemplate>
         </asp:UpdatePanel>
+        <div>
+            <asp:Label ID="Copyright" runat="server" Text="Copyright Tomasello 2018" BackColor="#66FFFF" BorderColor="#990033" BorderStyle="Dashed" Width="1000"></asp:Label>
+        </div>
+        
     </form>
 </body>
 </html>
