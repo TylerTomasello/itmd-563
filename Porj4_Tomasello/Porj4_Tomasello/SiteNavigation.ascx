@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SiteNavigation.ascx.cs" Inherits="Porj4_Tomasello.SiteNavigation" %>
+<!-- github repo link: https://github.com/TylerTomasello/itmd-563/tree/master/Porj4_Tomasello -->
 <h1>Mortgage Calculator</h1>
 <hr />
 <asp:Menu ID="Menu1" Orientation="Horizontal" runat="server" ForeColor="Black" BackColor="#FFFF99">

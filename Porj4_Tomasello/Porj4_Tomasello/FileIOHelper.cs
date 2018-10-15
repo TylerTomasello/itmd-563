@@ -39,15 +39,15 @@ namespace Porj4_Tomasello
 
         public List<string> ListAllMortgages()
         {
-            List<string> allData = new List<string>();
+            List<string> Data = new List<string>();
             string fileLocation = HttpContext.Current.Server.MapPath("~/app_data/log.txt");
 
             if (File.Exists(fileLocation))
             {
-                string[] allTempStringArray = File.ReadAllLines(fileLocation);
-                allData = new List<string>(allTempStringArray);
+                string[] TempStringArray = File.ReadAllLines(fileLocation);
+                Data = new List<string>(TempStringArray);
             }
-            return allData;
+            return Data;
         }
     }
 }
