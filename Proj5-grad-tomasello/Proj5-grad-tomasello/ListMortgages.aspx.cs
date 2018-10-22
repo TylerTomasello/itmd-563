@@ -20,6 +20,9 @@ namespace Proj5_grad_tomasello
                 list.Add("No Data");
             }
 
+            /* Had trouble making separate rows for each item, and they
+             * were inserting all in one column
+             * */
             GridView.DataSource = list;
             GridView.DataBind();
         }
