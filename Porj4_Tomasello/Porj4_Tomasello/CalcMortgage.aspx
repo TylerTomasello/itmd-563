@@ -13,12 +13,16 @@
 
         <div>
             Please enter the loan duration in years
-            <asp:RadioButtonList ID="Duration" AutoPostBack="true" OnSelectedIndexChanged="Duration_SelectedIndexChanged" runat="server">
-                <asp:ListItem Value="15">15 Years</asp:ListItem>
-                <asp:ListItem Value="30">30 Years</asp:ListItem>
-                <asp:ListItem>Other</asp:ListItem>
-            </asp:RadioButtonList>
-            <asp:TextBox ID="OtherYears" runat="server"></asp:TextBox>
+            <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional" runat="server">
+                <ContentTemplate>
+                    <asp:RadioButtonList ID="Duration" AutoPostBack="true" OnSelectedIndexChanged="Duration_SelectedIndexChanged" runat="server">
+                        <asp:ListItem Value="15">15 Years</asp:ListItem>
+                        <asp:ListItem Value="30">30 Years</asp:ListItem>
+                        <asp:ListItem>Other</asp:ListItem>
+                    </asp:RadioButtonList>
+                    <asp:TextBox ID="OtherYears" runat="server"></asp:TextBox>
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
         <br />
 
