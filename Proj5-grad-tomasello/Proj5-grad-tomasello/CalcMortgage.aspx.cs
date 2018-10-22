@@ -84,8 +84,8 @@ namespace Proj5_grad_tomasello
 
 
                 //FileIOHelper fileIOHelper = new FileIOHelper();
-                IIOHelper fileIOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
-                //IIOHelper fileIOHelper = IOFactory.CreateIOEngine();
+                //IIOHelper fileIOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
+                IIOHelper fileIOHelper = IOFactory.CreateIOEngine();
                 fileIOHelper.AddMortgages(output);
             }
         }

@@ -11,8 +11,8 @@ namespace Proj5_grad_tomasello
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            IIOHelper iOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
-            //IIOHelper iOHelper = IOFactory.CreateIOEngine();
+            //IIOHelper iOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
+            IIOHelper iOHelper = IOFactory.CreateIOEngine();
             var list = iOHelper.ListAllMortgages();
 
             if (list.Count == 0)

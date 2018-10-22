@@ -17,8 +17,8 @@ namespace Proj5_grad_tomasello
         protected void Clear_Click(object sender, EventArgs e)
         {
             //Call the IIOHelper to clear the mortgages
-            IIOHelper iOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
-            //IIOHelper iOHelper = IOFactory.CreateIOEngine();
+            //IIOHelper iOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
+            IIOHelper iOHelper = IOFactory.CreateIOEngine();
             iOHelper.ClearAllMortgages();
         }
     }
