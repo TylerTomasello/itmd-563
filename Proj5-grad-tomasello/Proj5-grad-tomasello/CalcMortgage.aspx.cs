@@ -82,7 +82,8 @@ namespace Proj5_grad_tomasello
                 string output = string.Format("Monthly Payment is {0:C}", month);
                 Result.Text = output;
 
-                FileIOHelper fileIOHelper = new FileIOHelper();
+                //FileIOHelper fileIOHelper = new FileIOHelper();
+                FileIOHelper fileIOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
                 fileIOHelper.AddMortgages(output);
             }
         }

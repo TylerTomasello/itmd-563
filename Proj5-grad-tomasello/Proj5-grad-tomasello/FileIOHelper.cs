@@ -8,12 +8,19 @@ namespace Proj5_grad_tomasello
 {
     public class FileIOHelper : IIOHelper
     {
+        private string pathandfile;
+
+        public FileIOHelper(string pathAndFile)
+        {
+            pathandfile = pathAndFile;
+        }
+
         //Add mortgages to the file
         public void AddMortgages(string formattedTempString)
         {
             try
             {
-                string fileLocation = HttpContext.Current.Server.MapPath("~/app_data/log.txt");
+                string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt")
                 using (var fileStream = File.AppendText(fileLocation))
                 {
                     fileStream.WriteLine(formattedTempString);
@@ -30,7 +37,7 @@ namespace Proj5_grad_tomasello
         {
             try
             {
-                string fileLocation = HttpContext.Current.Server.MapPath("~/app_data/log.txt");
+                string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt");
                 File.Delete(fileLocation);
             }
             catch (Exception ex)
@@ -43,7 +50,7 @@ namespace Proj5_grad_tomasello
         public List<string> ListAllMortgages()
         {
             List<string> Data = new List<string>();
-            string fileLocation = HttpContext.Current.Server.MapPath("~/app_data/log.txt");
+            string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt");
 
             if (File.Exists(fileLocation))
             {
