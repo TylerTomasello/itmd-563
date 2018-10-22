@@ -27,20 +27,60 @@ namespace Proj5_grad_tomasello
             }
         }
 
-        //public void AddPrinc(double principle)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        /* Had trouble putting in separtate rows on the gridview but was still able to use the database
+         * 
+         * 
+         * */
+        public void AddPrinc(double principle)
+        {
+            string insertCommand = "insert into mortgages values (@Principle)";
 
-        //public void Addrate(double rate)
-        //{
-        //    throw new NotImplementedException();
-        //}
+            using (SqlConnection sqlConnection = new SqlConnection(conString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(insertCommand, sqlConnection);
+                sqlCommand.Parameters.Add("@Principle", SqlDbType.Decimal).Value = principle;
 
-        //public void Addyear(double years)
-        //{
-        //    throw new NotImplementedException();
-        //}
+                sqlConnection.Open();
+                int result = sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+
+                if (result != 1) throw new Exception("Unable to add data to database");
+            }
+        }
+
+        public void Addrate(double rate)
+        {
+            string insertCommand = "insert into mortgages values (@InterestRate)";
+
+            using (SqlConnection sqlConnection = new SqlConnection(conString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(insertCommand, sqlConnection);
+                sqlCommand.Parameters.Add("@InterestRate", SqlDbType.Decimal).Value = rate;
+
+                sqlConnection.Open();
+                int result = sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+
+                if (result != 1) throw new Exception("Unable to add data to database");
+            }
+        }
+
+        public void Addyear(double years)
+        {
+            string insertCommand = "insert into mortgages values (@DurationYears)";
+
+            using (SqlConnection sqlConnection = new SqlConnection(conString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(insertCommand, sqlConnection);
+                sqlCommand.Parameters.Add("@DurationYears", SqlDbType.Int).Value = years;
+
+                sqlConnection.Open();
+                int result = sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+
+                if (result != 1) throw new Exception("Unable to add data to database");
+            }
+        }
 
         public void ClearAllMortgages()
         {
