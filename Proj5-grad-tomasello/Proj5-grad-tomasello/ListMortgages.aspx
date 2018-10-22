@@ -2,9 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- github repo link:  -->
+    <!-- github repo link:  https://github.com/TylerTomasello/itmd-563/tree/master/Proj5-grad-tomasello-->
     <h2>List Mortgages</h2>
-    <asp:GridView ID="GridView" runat="server"></asp:GridView>
+    <asp:GridView ID="GridView" runat="server" BackColor="#CCFF99">
+    </asp:GridView>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>

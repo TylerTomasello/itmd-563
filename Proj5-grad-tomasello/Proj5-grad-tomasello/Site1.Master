@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 
 <html>
-    <!-- github repo link:  -->
+    <!-- github repo link: https://github.com/TylerTomasello/itmd-563/tree/master/Proj5-grad-tomasello -->
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">

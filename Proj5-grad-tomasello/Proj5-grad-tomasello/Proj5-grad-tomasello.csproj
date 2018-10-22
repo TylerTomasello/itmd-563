@@ -89,11 +89,13 @@
     <Compile Include="ClearMortgages.aspx.designer.cs">
       <DependentUpon>ClearMortgages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseIOHelper.cs" />
     <Compile Include="FileIOHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IIOHelper.cs" />
+    <Compile Include="IOFactory.cs" />
     <Compile Include="ListMortgages.aspx.cs">
       <DependentUpon>ListMortgages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

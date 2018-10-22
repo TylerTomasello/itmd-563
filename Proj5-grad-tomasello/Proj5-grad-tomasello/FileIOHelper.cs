@@ -15,6 +15,54 @@ namespace Proj5_grad_tomasello
             pathandfile = pathAndFile;
         }
 
+        //public void AddPrinc(double principle)
+        //{
+        //    try
+        //    {
+        //        string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt")
+        //        using (var fileStream = File.AppendText(fileLocation))
+        //        {
+        //            fileStream.WriteLine(principle);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        //public void Addyear(double years)
+        //{
+        //    try
+        //    {
+        //        string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt")
+        //        using (var fileStream = File.AppendText(fileLocation))
+        //        {
+        //            fileStream.WriteLine(years);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        //public void Addrate(double rate)
+        //{
+        //    try
+        //    {
+        //        string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt")
+        //        using (var fileStream = File.AppendText(fileLocation))
+        //        {
+        //            fileStream.WriteLine(rate);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
         //Add mortgages to the file
         public void AddMortgages(string formattedTempString)
         {
