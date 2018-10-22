@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Proj5_grad_tomasello.Site1" %>
+
+<%@ Register Src="~/SiteNavigation.ascx" TagPrefix="uc1" TagName="SiteNavigation" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+    <!-- github repo link:  -->
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:Label ID="MasterP" runat="server" Text="This is the awesome master page" BackColor="#66FFFF" BorderColor="#990033" BorderStyle="Dashed" Width="1000" Font-Size="XX-Large" Font-Bold="True"></asp:Label>
+    <hr />
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <uc1:SiteNavigation runat="server" id="SiteNavigation" />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <hr />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server" Enabled="true" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:Label ID="TimerLabel" runat="server" Text=""></asp:Label>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <div>
+            <asp:Label ID="Copyright" runat="server" Text="Copyright Tomasello 2018" BackColor="#66FFFF" BorderColor="#990033" BorderStyle="Dashed" Width="1000"></asp:Label>
+        </div>
+        
+    </form>
+</body>
+</html>
