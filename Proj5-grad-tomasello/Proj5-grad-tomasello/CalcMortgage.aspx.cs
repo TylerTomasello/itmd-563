@@ -39,11 +39,11 @@ namespace Proj5_grad_tomasello
             string princ = PrincipleAmount.Text;
             string year = OtherYears.Text;
             string rate = DropDownList1.SelectedItem.Text;
-            double years = 0;
+            float years = 0;
             bool check = false;
 
             //Make sure the value is legitamte to use
-            if (double.TryParse(princ, out double principle) == false)
+            if (float.TryParse(princ, out float principle) == false)
             {
                 Result.Text = $"Error: Please enter a Priciple Amount";
                 check = true;
@@ -61,7 +61,7 @@ namespace Proj5_grad_tomasello
             else if (Duration.SelectedIndex == 2)
             {
                 //Check to make sure inputted year is legal
-                if (double.TryParse(year, out years) == false)
+                if (float.TryParse(year, out years) == false)
                 {
                     Result.Text = $"Error: Please enter a Loan Duration";
                     check = true;
@@ -69,7 +69,7 @@ namespace Proj5_grad_tomasello
             }
 
             //Make sure user selects a rate
-            if (double.TryParse(rate, out double Rate) == false)
+            if (float.TryParse(rate, out float Rate) == false)
             {
                 Result.Text = $"Error: Please select an Interest Rate";
                 check = true;
@@ -86,10 +86,10 @@ namespace Proj5_grad_tomasello
                 //FileIOHelper fileIOHelper = new FileIOHelper();
                 //IIOHelper fileIOHelper = new FileIOHelper(ServerPathHelper.GetPath("~/app_data/log.txt"));
                 IIOHelper fileIOHelper = IOFactory.CreateIOEngine();
-                fileIOHelper.AddPrinc(principle);
-                fileIOHelper.Addyear(years);
-                fileIOHelper.Addrate(Rate);
-                fileIOHelper.AddMortgages(output);
+                //fileIOHelper.AddPrinc(principle);
+                //fileIOHelper.Addyear(years);
+                //fileIOHelper.Addrate(Rate);
+                fileIOHelper.AddMortgages(output, principle, years, Rate);
             }
         }
 

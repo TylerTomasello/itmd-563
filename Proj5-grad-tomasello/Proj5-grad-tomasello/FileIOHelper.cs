@@ -71,7 +71,7 @@ namespace Proj5_grad_tomasello
                 string fileLocation = pathandfile; //HttpContext.Current.Server.MapPath("~/app_data/log.txt")
                 using (var fileStream = File.AppendText(fileLocation))
                 {
-                    fileStream.WriteLine(formattedPrinciple, formattedRate, formattedYears,formattedTempString);
+                    fileStream.WriteLine(formattedTempString, ";", formattedPrinciple, ";", formattedRate, ";", formattedYears);
                 }
             }
             catch (Exception ex)
@@ -103,7 +103,20 @@ namespace Proj5_grad_tomasello
             if (File.Exists(fileLocation))
             {
                 string[] TempStringArray = File.ReadAllLines(fileLocation);
-                Data = new List<PaymentInfo>(TempStringArray);
+                foreach (var item in TempStringArray)
+                {
+                    var splitS = item.Split(';');
+                    PaymentInfo paymentInfo = new PaymentInfo()
+                    {
+                        Principle = (float)Convert.ToDouble(splitS[0]),
+                        Rate = (float)Convert.ToDouble(splitS[2]),
+                        Years =(float)Convert.ToDouble(splitS[4]),
+                        MonthlyPayment = splitS[6]
+                    };
+                    Data.Add(paymentInfo);
+                }
+                //Data = new List<PaymentInfo>(TempStringArray);
+                
             }
             return Data;
         }

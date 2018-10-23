@@ -17,14 +17,19 @@ namespace Proj5_grad_tomasello
 
             if (list.Count == 0)
             {
-                list.Add("No Data");
+                //list.Add("No Data");
+                Response.Write("No Data");
             }
 
             /* Had trouble making separate rows for each item, and they
              * were inserting all in one column
              * */
-            GridView.DataSource = list;
-            GridView.DataBind();
+            else
+            {
+                GridView.DataSource = list;
+                GridView.DataBind();
+            }
+            
         }
     }
 }
