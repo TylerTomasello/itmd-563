@@ -5,9 +5,6 @@
     <!-- github repo link:  https://github.com/TylerTomasello/itmd-563/tree/master/Proj5-grad-tomasello-->
     <h2>List Mortgages</h2>
     <asp:GridView ID="GridView" runat="server" BackColor="#CCFF99">
-        <Columns>
-            <asp:BoundField HeaderText="Principle"></asp:BoundField>
-        </Columns>
     </asp:GridView>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">

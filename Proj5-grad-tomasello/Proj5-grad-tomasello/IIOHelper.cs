@@ -7,11 +7,8 @@ namespace Proj5_grad_tomasello
 {
     public interface IIOHelper
     {
-        List<string> ListAllMortgages();
-        void AddPrinc(double principle);
-        void Addrate(double rate);
-        void Addyear(double years);
-        void AddMortgages(string formattedTempString);
+        List<PaymentInfo> ListAllMortgages();
+        void AddMortgages(string formattedTempString, float formattedPrinciple, float formattedYears, float formattedRate);
         void ClearAllMortgages();
     }
 }
