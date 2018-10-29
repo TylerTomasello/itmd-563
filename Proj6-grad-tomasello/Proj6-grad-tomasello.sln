@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proj6-grad-tomasello", "Proj6-grad-tomasello\Proj6-grad-tomasello.csproj", "{B32F3D4B-6B20-4C8C-930A-0FB8635D5869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proj6-grad-tomasello.Tests", "Proj6-grad-tomasello.Tests\Proj6-grad-tomasello.Tests.csproj", "{34BFAA07-2D5E-486C-909E-0F5CEDBBEE7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B32F3D4B-6B20-4C8C-930A-0FB8635D5869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32F3D4B-6B20-4C8C-930A-0FB8635D5869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32F3D4B-6B20-4C8C-930A-0FB8635D5869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32F3D4B-6B20-4C8C-930A-0FB8635D5869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BFAA07-2D5E-486C-909E-0F5CEDBBEE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BFAA07-2D5E-486C-909E-0F5CEDBBEE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BFAA07-2D5E-486C-909E-0F5CEDBBEE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BFAA07-2D5E-486C-909E-0F5CEDBBEE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BDE4076-F906-4FE9-BB10-428AD73E2404}
+	EndGlobalSection
+EndGlobal
