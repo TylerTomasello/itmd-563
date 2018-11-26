@@ -67,16 +67,6 @@ namespace Proj7_grad_tomasello.Controllers
 
                 db.CalcMortgages.Add(calcMortgage);
                 db.SaveChanges();
-
-                List<SelectListItem> items = new List<SelectListItem>();
-                for (float i = 0.25f; i < 10.25; i += 0.25f)
-                {
-                    SelectListItem item = new SelectListItem { Text = i.ToString(), Value = i.ToString() };
-                    items.Add(item);
-                }
-                SelectList selectedList = new SelectList(items);
-                ViewBag.DdList = selectedList;
-
                 return RedirectToAction("Index");
             }
             InterestAmounts();

@@ -26,15 +26,15 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.RadioButtonFor(model => model.Duration, "15", new { Class = "dur" })
+                @Html.RadioButtonFor(model => model.Duration, "15", new { @class = "dur" })
                 <span>15 Years</span>
                 <br />
 
-                @Html.RadioButtonFor(model => model.Duration, "30", new { Class = "dur" })
+                @Html.RadioButtonFor(model => model.Duration, "30", new { @class = "dur" })
                 <span>30 Years</span>
                 <br />
 
-                @Html.RadioButtonFor(model => model.Duration, "Other", new { Class = "dur" })
+                @Html.RadioButtonFor(model => model.Duration, "Other", new { @class = "dur" })
                 <span>Other</span>
                 <input type="text" name="OInput" value="" disabled />
             </div>
