@@ -18,6 +18,9 @@ namespace Proj7_grad_tomasello.Controllers
         // GET: CalcMortgages
         public ActionResult Index()
         {
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View(db.CalcMortgages.ToList());
         }
 
@@ -33,12 +36,18 @@ namespace Proj7_grad_tomasello.Controllers
             {
                 return HttpNotFound();
             }
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View(calcMortgage);
         }
 
         // GET: CalcMortgages/Create
         public ActionResult Create()
         {
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View();
         }
 
@@ -52,14 +61,17 @@ namespace Proj7_grad_tomasello.Controllers
             if (ModelState.IsValid)
             {
                 ViewBag.CalculateTemp = CalculateMortgage.CalcMonthlyPayment(calcMortgage.Principle, calcMortgage.Duration, calcMortgage.Rate);
-                ViewBag.Msg = $"The Cost is is {ViewBag.CalculateTemp}";
-                calcMortgage.Result = CalculateMortgage.CalcMonthlyPayment(calcMortgage.Principle, calcMortgage.Duration, calcMortgage.Rate);
+                //ViewBag.Msg = $"The Monthly Payment is {ViewBag.CalculateTemp}";
+                string output = string.Format("Monthly Payment is {0:C}", ViewBag.CalculateTemp);
+                calcMortgage.Result = output;
 
                 db.CalcMortgages.Add(calcMortgage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             InterestAmounts();
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
             return View(calcMortgage);
         }
 
@@ -75,6 +87,10 @@ namespace Proj7_grad_tomasello.Controllers
             {
                 return HttpNotFound();
             }
+
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View(calcMortgage);
         }
 
@@ -91,6 +107,10 @@ namespace Proj7_grad_tomasello.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View(calcMortgage);
         }
 
@@ -106,6 +126,10 @@ namespace Proj7_grad_tomasello.Controllers
             {
                 return HttpNotFound();
             }
+
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return View(calcMortgage);
         }
 
@@ -117,6 +141,10 @@ namespace Proj7_grad_tomasello.Controllers
             CalcMortgage calcMortgage = db.CalcMortgages.Find(id);
             db.CalcMortgages.Remove(calcMortgage);
             db.SaveChanges();
+
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             return RedirectToAction("Index");
         }
 
@@ -126,6 +154,10 @@ namespace Proj7_grad_tomasello.Controllers
             {
                 db.Dispose();
             }
+
+            // Display Date and time but does not update
+            ViewData["DateTime"] = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
+
             base.Dispose(disposing);
         }
 

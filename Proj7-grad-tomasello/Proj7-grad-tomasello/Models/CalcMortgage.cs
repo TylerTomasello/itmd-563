@@ -29,7 +29,7 @@ namespace Proj7_grad_tomasello.Models
         public virtual double Rate { get; set; }
 
         [ScaffoldColumn(false)]
-        public virtual double Result { get; set; }
+        public virtual string Result { get; set; }
     }
 
     

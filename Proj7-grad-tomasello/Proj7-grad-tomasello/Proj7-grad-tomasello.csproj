@@ -155,6 +155,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811262152119_Changed the result val.cs" />
+    <Compile Include="Migrations\201811262152119_Changed the result val.Designer.cs">
+      <DependentUpon>201811262152119_Changed the result val.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CalcMortgage.cs" />
     <Compile Include="Models\Proj7_grad_tomaselloContext.cs" />
@@ -174,6 +178,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811262152119_Changed the result val.resx">
+      <DependentUpon>201811262152119_Changed the result val.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
