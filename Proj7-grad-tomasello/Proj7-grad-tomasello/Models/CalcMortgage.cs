@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
+// Github link: https://github.com/TylerTomasello/itmd-563/tree/master/Proj7-grad-tomasello
+
 namespace Proj7_grad_tomasello.Models
 {
 
