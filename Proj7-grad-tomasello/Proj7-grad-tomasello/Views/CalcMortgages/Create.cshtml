@@ -43,9 +43,19 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.DropDownList("")*@
-                @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
+
+                @{
+                    List<SelectListItem> items = new List<SelectListItem>();
+                    for (float i = 0.25f; i < 10.25; i += 0.25f)
+                    {
+                        SelectListItem item = new SelectListItem { Text = i.ToString(), Value = i.ToString() };
+                        items.Add(item);
+                    }
+                }
+
+                @Html.DropDownListFor(model => model.Rate, items, "-- Select Rate --")
+                @*@Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
