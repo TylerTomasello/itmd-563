@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Calculate Mortgage</h2>
 
 
 @using (Html.BeginForm()) 
@@ -13,7 +13,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CalcMortgage</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -27,8 +26,17 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Duration, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                @Html.RadioButtonFor(model => model.Duration, "15", new { Class = "dur" })
+                <span>15 Years</span>
+                <br />
+
+                @Html.RadioButtonFor(model => model.Duration, "30", new { Class = "dur" })
+                <span>30 Years</span>
+                <br />
+
+                @Html.RadioButtonFor(model => model.Duration, "Other", new { Class = "dur" })
+                <span>Other</span>
+                <input type="text" name="OInput" value="" disabled />
             </div>
         </div>
 
@@ -49,10 +57,32 @@
     </div>
 }
 
+    
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+@section scripts {
+    <script>
+        $(function () {
+            $(".dur").click(function () {
+                //alert("test");
+                var valIs = $(this).prop('value');
+                
+                if (valIs == "Other") {
+                    $("#OInput").prop('disabled', false);
+                    $("#OInput").focus();
+                }
+                else {
+                    $("#OInput").prop('disabled', true);
+                    $("#OInput").val("");
+                }
+            });
+
+        });
+     </script>
+}

@@ -6,6 +6,12 @@ using System.Web;
 
 namespace Proj7_grad_tomasello.Models
 {
+
+    public enum DurationTypes
+    {
+
+    }
+
     public class CalcMortgage
     {
         [Key]
@@ -24,8 +30,5 @@ namespace Proj7_grad_tomasello.Models
         public virtual double Result { get; set; }
     }
 
-    public enum RateTypes
-    {
-
-    }
+    
 }
