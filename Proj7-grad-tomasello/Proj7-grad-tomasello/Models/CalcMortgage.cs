@@ -15,12 +15,17 @@ namespace Proj7_grad_tomasello.Models
         public virtual double Principle { get; set; }
 
         [Required]
-        public virtual double DurationYears { get; set; }
+        public virtual double Duration { get; set; }
 
         [Required]
-        public virtual double InterestRate { get; set; }
+        public virtual double Rate { get; set; }
 
         [ScaffoldColumn(false)]
-        public virtual double MonthlyPayment { get; set; }
+        public virtual double Result { get; set; }
+    }
+
+    public enum RateTypes
+    {
+
     }
 }

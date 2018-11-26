@@ -50,11 +50,15 @@ namespace Proj7_grad_tomasello.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewBag.CalculateTemp = CalculateMortgage.CalcMonthlyPayment(calcMortgage.Principle, calcMortgage.Duration, calcMortgage.Rate);
+                ViewBag.Msg = $"The Cost is is {ViewBag.CalculateTemp}";
+                calcMortgage.Result = CalculateMortgage.CalcMonthlyPayment(calcMortgage.Principle, calcMortgage.Duration, calcMortgage.Rate);
+
                 db.CalcMortgages.Add(calcMortgage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            InterestAmounts();
             return View(calcMortgage);
         }
 
@@ -122,6 +126,18 @@ namespace Proj7_grad_tomasello.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private List<SelectListItem> InterestAmounts()
+        {
+            List<SelectListItem> items = new List<SelectListItem>();
+
+            for (float i=0.25f; i<10.25; i += 0.25f)
+            {
+                SelectListItem item = new SelectListItem { Text = i.ToString(), Value = i.ToString() };
+                items.Add(item);
+            }
+            return items;
         }
     }
 }
